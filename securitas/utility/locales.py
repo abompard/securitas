@@ -1,6 +1,4 @@
-from flask import request
-
-from .defaults import DEFAULTS
+from flask import current_app, request
 
 
 def guess_locale():
@@ -20,7 +18,7 @@ def guess_locale():
         else:
             return short_locales[locale]
     # Unspecified or unsupported locale, fallback.
-    return DEFAULTS["user_locale"]
+    return current_app.config["USER_DEFAULTS"]["user_locale"]
 
 
 LOCALES = [
