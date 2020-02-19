@@ -26,3 +26,6 @@ PASSWORD_RESET_EXPIRATION = 10
 
 # Email sender
 MAIL_FROM = "Securitas <securitas@example.com>"
+
+# Set to False for prod
+TESTING = True
