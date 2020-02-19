@@ -18,7 +18,7 @@ if app.config.get('TEMPLATES_AUTO_RELOAD'):
 ipa_admin = IPAAdmin(app)
 
 # Theme support
-themename = app.config.get('THEME', 'default')
+themename = app.config.get('THEME')
 blueprint = Blueprint(
     'theme',
     __name__,
